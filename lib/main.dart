@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shoppe/app.dart';
 
 void main() {
-  runApp(const Text("hi"));
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(const MyApp());
 }
-
