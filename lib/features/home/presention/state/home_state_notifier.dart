@@ -1,22 +1,36 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '/core/domain/entity/food/food_entity.dart';
-import '/core/domain/usecase/food_usecase/GetListFood.dart';
-import '/features/home/presention/state/home_state.dart';
+import 'package:shoppe/core/domain/entity/food/food_entity.dart';
+import 'package:shoppe/core/domain/usecase/food_usecase/GetListFood.dart';
+import 'package:shoppe/features/home/presention/state/home_state.dart';
 
-class HomeStateNotifier extends StateNotifier<HomeState> {
+class HomeStateNotifier extends StateNotifier< AsyncValue< HomeState>> {
   final GetListFood? getListFoodUseCase;
   HomeStateNotifier({
-     this.getListFoodUseCase,
-  }) : super(HomeState(listFoodEntity: [], isLoading: false));
+    this.getListFoodUseCase,
+  }) : super(const AsyncValue.loading());
 
   Future< List<FoodEntity>?> loadTodos() async {
-    state = state.copyWith(isLoading: true);
+    state = const AsyncValue.loading();
     try {
-      List<FoodEntity>? todos = await getListFoodUseCase?.getListFood();
-      state = state.copyWith(listFoodEntity: [], isLoading: false);
-     return todos;
+      Future.delayed(const Duration(seconds: 2),(){
+        state = AsyncValue.data(
+          HomeState(
+            listFoodEntity: [
+              FoodEntity(image: "hihi",name: "dat",discountPercent: 10)
+            ],
+            isLoading: false,
+            errorMessage: null,
+          ),
+        );
+        // return [
+        //   FoodEntity(image: "hihi",name: "dat",discountPercent: 10)
+        // ];
+      });
+      // List<FoodEntity>? todos = await getListFoodUseCase?.getListFood();
+      // state = state.copyWith(listFoodEntity: [], isLoading: false);
+
     } catch (e) {
-      state = state.copyWith(isLoading: false, errorMessage: e.toString());
+      state = AsyncValue.error(e,StackTrace.fromString(e.toString()));
     }
     return [];
   }

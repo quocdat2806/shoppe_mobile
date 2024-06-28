@@ -1,13 +1,12 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '/core/data/datasource/food/food_datasource.dart';
-import '/core/data/datasource/food/food_datasource_ipl.dart';
-import '/core/data/responsitory/food/food_responsitory_ipl.dart';
-import '/core/domain/responsitory/food/food_responsitory.dart';
-import '/core/domain/usecase/food_usecase/GetListFood.dart';
-import '/core/network/api_client.dart';
-import '/core/network/api_utils.dart';
-import '/features/home/presention/state/home_state.dart';
-import '/features/home/presention/state/home_state_notifier.dart';
+import 'package:shoppe/core/data/datasource/food/food_datasource.dart';
+import 'package:shoppe/core/data/datasource/food/food_datasource_ipl.dart';
+import 'package:shoppe/core/data/responsitory/food/food_responsitory_ipl.dart';
+import 'package:shoppe/core/domain/responsitory/food/food_responsitory.dart';
+import 'package:shoppe/core/domain/usecase/food_usecase/GetListFood.dart';
+import 'package:shoppe/core/network/api_utils.dart';
+import 'package:shoppe/features/home/presention/state/home_state.dart';
+import 'package:shoppe/features/home/presention/state/home_state_notifier.dart';
 
 // Data Source
 final todoDataSourceProvider = Provider<FoodDatasource>((ref) {
@@ -28,7 +27,7 @@ final getTodosProvider = Provider<GetListFood>((ref) {
 
 // State Notifier
 final todoStateNotifierProvider =
-StateNotifierProvider<HomeStateNotifier, HomeState>((ref) {
+StateNotifierProvider<HomeStateNotifier, AsyncValue<HomeState>>((ref) {
   final getTodos = ref.watch(getTodosProvider);
   return HomeStateNotifier(
     getListFoodUseCase: getTodos,

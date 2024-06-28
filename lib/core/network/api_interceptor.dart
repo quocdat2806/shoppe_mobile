@@ -27,7 +27,7 @@ class ApiInterceptors extends QueuedInterceptorsWrapper {
 
     switch (statusCode) {
       case 401:
-        const savedToken = 'xxxx'; // Thay thế bằng cách lấy token từ lưu trữ
+        const savedToken = 'xxxx';
         String requestingTokens = err.requestOptions.headers['Authorization']
             .toString()
             .replaceFirst("Bearer ", "");

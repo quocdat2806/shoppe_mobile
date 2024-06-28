@@ -1,4 +1,4 @@
-import '/core/domain/entity/food/food_entity.dart';
+import 'package:shoppe/core/domain/entity/food/food_entity.dart';
 
 class HomeState {
   final List<FoodEntity>? listFoodEntity;
