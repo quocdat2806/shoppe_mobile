@@ -4,6 +4,6 @@ import '/features/main/presention/state/main_page_state.dart';
 import '/features/main/presention/state/main_page_state_notifier.dart';
 
 final mainPageStateNotifierProvider =
-StateNotifierProvider<MainPageStateNotifier, MainPageState>((ref) {
+StateNotifierProvider<MainPageStateNotifier, MainState>((ref) {
   return MainPageStateNotifier();
 });

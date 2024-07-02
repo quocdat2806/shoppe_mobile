@@ -39,33 +39,28 @@ class AppTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      // decoration: BoxDecoration(
-      //
-      // ),
-      child: Row(
-        children: [
-          const SizedBox(width: 8),
-          prefixIcon ?? const SizedBox.shrink(),
-          const SizedBox(width: 8),
-          Expanded(
-            child: TextFormField(
-              controller: controller,
-              style: style ?? AppTextStyle.blackS14,
-              decoration: InputDecoration(
-                hintText: hintText,
-                // border: InputBorder(borderSide: BorderSide.),
-                focusedBorder: InputBorder.none,
-                enabledBorder: InputBorder.none,
-                contentPadding: EdgeInsets.zero,
-                hintStyle: hintStyle ?? AppTextStyle.grayS14,
-              ),
+    return Row(
+      children: [
+        const SizedBox(width: 8),
+        prefixIcon ?? const SizedBox.shrink(),
+        const SizedBox(width: 8),
+        Expanded(
+          child: TextFormField(
+            controller: controller,
+            style: style ?? AppTextStyle.blackS14,
+            decoration: InputDecoration(
+              hintText: hintText,
+              // border: InputBorder(borderSide: BorderSide.),
+              focusedBorder: InputBorder.none,
+              enabledBorder: InputBorder.none,
+              contentPadding: EdgeInsets.zero,
+              hintStyle: hintStyle ?? AppTextStyle.grayS14,
             ),
           ),
-          const SizedBox(width: 8),
-          suffixIcon??const SizedBox.shrink()
-        ],
-      ),
+        ),
+        const SizedBox(width: 8),
+        suffixIcon??const SizedBox.shrink()
+      ],
     );
     // return Padding(
     //   padding: const EdgeInsets.symmetric(horizontal: 12),

@@ -16,8 +16,9 @@ class MainPage extends ConsumerWidget {
     debugPrint("index $mainPageState");
     return MaterialApp(
       home: Scaffold(
-        body: const AuthPage(), // new
+        body:  AuthPage(), // new
         bottomNavigationBar: BottomNavigationBar(
+          type:BottomNavigationBarType.fixed ,
           currentIndex: mainPageState.currentIndexPage, // new
           onTap:(index){
             mainPageNotifier.handleSwitchTab(currentIndexTab: index);
@@ -29,7 +30,15 @@ class MainPage extends ConsumerWidget {
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.search),
-              label: 'Search',
+              label: 'don hang',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.search),
+              label: 'favorite',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.search),
+              label: 'thong bao',
             ),
             BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile')
           ],

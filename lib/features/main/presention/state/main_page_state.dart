@@ -1,13 +1,13 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/cupertino.dart';
 @immutable
-class MainPageState extends Equatable{
+class MainState extends Equatable{
   final  int currentIndexPage;
-  const MainPageState({this.currentIndexPage = 0});
-  MainPageState copyWith({
+  const MainState({this.currentIndexPage = 0});
+  MainState copyWith({
     int? currentIndexPage,
   }) {
-    return MainPageState(
+    return MainState(
       currentIndexPage: currentIndexPage ?? this.currentIndexPage,
     );
   }
