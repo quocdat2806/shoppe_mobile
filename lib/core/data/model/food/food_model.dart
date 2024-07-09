@@ -1,8 +1,7 @@
-import '/core/domain/entity/food/food_entity.dart';
 import 'package:json_annotation/json_annotation.dart';
 part 'food_model.g.dart';
 @JsonSerializable()
-class FoodModel extends FoodEntity {
+class FoodModel  {
   late final String? name ;
   late final String? image ;
   late final int? discountPercent;

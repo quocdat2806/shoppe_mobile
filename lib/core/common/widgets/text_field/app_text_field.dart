@@ -50,10 +50,8 @@ class AppTextField extends StatelessWidget {
             style: style ?? AppTextStyle.blackS14,
             decoration: InputDecoration(
               hintText: hintText,
-              // border: InputBorder(borderSide: BorderSide.),
               focusedBorder: InputBorder.none,
               enabledBorder: InputBorder.none,
-              contentPadding: EdgeInsets.zero,
               hintStyle: hintStyle ?? AppTextStyle.grayS14,
             ),
           ),

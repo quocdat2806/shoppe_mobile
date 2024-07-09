@@ -4,7 +4,7 @@ class AppConfigs {
 
   static const String appName = "shoppe";
 
-  static const String fontFamily = "Roboto";
+  static const String fontFamily = "Montserrat";
 
 
 

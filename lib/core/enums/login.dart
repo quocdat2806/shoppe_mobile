@@ -15,4 +15,19 @@ extension LoginExt on Login {
         return "";
     }
   }
+  String type() {
+    switch (this) {
+      case Login.sms:
+        return "sms";
+      case Login.email:
+        return "email";
+      case Login.google:
+        return "google";
+      case Login.shoppe:
+        return "shoppe";
+      case Login.facebook:
+        return "facebook";
+    }
+  }
+
 }

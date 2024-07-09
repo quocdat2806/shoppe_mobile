@@ -9,13 +9,13 @@ class ApiUtil {
     if (dio == null) {
       dio = Dio();
       dio!.options.connectTimeout = const Duration(milliseconds: 60000);
-      dio!.interceptors.add(ApiInterceptors());
-      dio!.interceptors.add(PrettyDioLogger(
-        requestHeader: true,
-        requestBody: true,
-        responseBody: true,
-        compact: false,
-      ));
+      // dio!.interceptors.add(ApiInterceptors());
+      // dio!.interceptors.add(PrettyDioLogger(
+      //   requestHeader: true,
+      //   requestBody: true,
+      //   responseBody: true,
+      //   compact: false,
+      // ));
     }
     return dio!;
   }

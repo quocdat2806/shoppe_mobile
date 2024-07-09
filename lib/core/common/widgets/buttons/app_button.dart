@@ -95,6 +95,7 @@ class AppButton extends StatelessWidget {
       return Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          leadingIcon !=null? const SizedBox(width: 12):const SizedBox.shrink(),
           leadingIcon ?? Container(),
           Expanded(
             child: Center(

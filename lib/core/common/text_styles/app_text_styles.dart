@@ -6,6 +6,30 @@ import '../color/app_colors.dart';
 class AppTextStyle {
   AppTextStyle._();
 
+  ///Main
+  static const primary = TextStyle(
+    color: AppColors.primary,
+    fontWeight: FontWeight.w400,
+    fontFamily: AppConfigs.fontFamily,
+  );
+  static final primaryS12 = primary.copyWith(fontSize: 12);
+  static final primaryS12Medium = primary.copyWith(fontWeight: FontWeight.w500);
+  static final primaryS12Bold = primary.copyWith(fontWeight: FontWeight.bold);
+  static final primaryS12W800 = primary.copyWith(fontWeight: FontWeight.w800);
+
+  //s14
+  static final primaryS14 = primary.copyWith(fontSize: 14);
+  static final primaryS14Medium = primaryS14.copyWith(fontWeight: FontWeight.w500);
+  static final primaryS14Bold = primaryS14.copyWith(fontWeight: FontWeight.bold);
+  static final primaryS14W700 = primaryS14.copyWith(fontWeight: FontWeight.w700);
+  static final primaryS14W800 = primaryS14.copyWith(fontWeight: FontWeight.w800);
+
+  static final primaryS20 = primary.copyWith(fontSize: 20);
+  static final primaryS20Medium = primaryS20.copyWith(fontWeight: FontWeight.w500);
+  static final primaryS20Bold = primaryS20.copyWith(fontWeight: FontWeight.bold);
+  static final primaryS20W700 = primaryS20.copyWith(fontWeight: FontWeight.w700);
+  static final primaryS20W800 = primaryS20.copyWith(fontWeight: FontWeight.w800);
+
   ///Black
   static const black = TextStyle(
     color: AppColors.textBlack,
@@ -45,29 +69,6 @@ class AppTextStyle {
   static final blackS20W700 = blackS20.copyWith(fontWeight: FontWeight.w700);
   static final blackS20W800 = blackS20.copyWith(fontWeight: FontWeight.w800);
 
-  ///Black1
-  static const black1 = TextStyle(
-    color: AppColors.black1,
-    fontWeight: FontWeight.w400,
-    fontFamily: AppConfigs.fontFamily,
-  );
-  //s20
-  static final black1S20 = black1.copyWith(fontSize: 20);
-  static final black1S20Bold = black1S20.copyWith(fontWeight: FontWeight.bold);
-  static final black1S20W700 = black1S20.copyWith(fontWeight: FontWeight.w700);
-  static final black1S20W800 = black1S20.copyWith(fontWeight: FontWeight.w800);
-
-  static const black2 = TextStyle(
-    color: AppColors.black2,
-    fontWeight: FontWeight.w400,
-    fontFamily: AppConfigs.fontFamily,
-  );
-
-  //s16
-  static final black2S16 = black2.copyWith(fontSize: 16);
-  static final black2S16Bold = black2S16.copyWith(fontWeight: FontWeight.bold);
-  static final black2S16W700 = black2S16.copyWith(fontWeight: FontWeight.w700);
-  static final black2S16W800 = black2S16.copyWith(fontWeight: FontWeight.w800);
 
   ///Grey
   static const grey = TextStyle(
@@ -83,17 +84,13 @@ class AppTextStyle {
   static final greyS12W800 = greyS12.copyWith(fontWeight: FontWeight.w800);
 
 
-  static const grey3 = TextStyle(
-    color: AppColors.grey3,
-    fontWeight: FontWeight.w400,
-    fontFamily: AppConfigs.fontFamily,
-  );
+  static final greyS14 = grey.copyWith(fontSize: 14);
+  static final greyS14Bold = greyS14.copyWith(fontWeight: FontWeight.bold);
+  static final greyS14W200 = greyS14.copyWith(fontWeight: FontWeight.w200);
 
-  //s12
-  static final grey3S12 = grey3.copyWith(fontSize: 12);
-  static final grey3S12Bold = grey3S12.copyWith(fontWeight: FontWeight.bold);
-  static final grey3S12W700 = grey3S12.copyWith(fontWeight: FontWeight.w700);
-  static final grey3S12W800 = grey3S12.copyWith(fontWeight: FontWeight.w800);
+  static final greyS14W700 = greyS14.copyWith(fontWeight: FontWeight.w700);
+
+  static final greyS14W800 = greyS14.copyWith(fontWeight: FontWeight.w800);
 
 
 
@@ -164,6 +161,26 @@ class AppTextStyle {
   static final whiteS18Bold = whiteS18.copyWith(fontWeight: FontWeight.bold);
   static final whiteS18W800 = whiteS18.copyWith(fontWeight: FontWeight.w800);
 
+  //s20
+  static final whiteS20 = white.copyWith(fontSize: 20);
+  static final whiteS20Bold = whiteS20.copyWith(fontWeight: FontWeight.bold);
+  static final whiteS20W800 = whiteS20.copyWith(fontWeight: FontWeight.w800);
+
+
+  static final whiteS24 = white.copyWith(fontSize: 24);
+  static final whiteS24Bold = whiteS24.copyWith(fontWeight: FontWeight.bold);
+  static final whiteS24W800 = whiteS24.copyWith(fontWeight: FontWeight.w800);
+  static const grey2 = TextStyle(
+    color: AppColors.grey2,
+    fontWeight: FontWeight.w400,
+    fontFamily: AppConfigs.fontFamily,
+  );
+  static const grey6 = TextStyle(
+    color: AppColors.grey6,
+    fontWeight: FontWeight.w400,
+    fontFamily: AppConfigs.fontFamily,
+  );
+
   ///Gray
   static const gray = TextStyle(
     color: AppColors.textGray,
@@ -225,6 +242,20 @@ class AppTextStyle {
   static final yellowThinS12 = yellowThin1.copyWith(fontSize: 12);
   static final yellowThinS12Bold= yellowThinS12.copyWith(fontWeight: FontWeight.bold);
   static final yellowThinS12W700 = yellowThinS12.copyWith(fontWeight: FontWeight.w700);
-
-
+  static const green = TextStyle(
+    color: AppColors.green1,
+    fontWeight: FontWeight.w400,
+    fontFamily: AppConfigs.fontFamily,
+  );
+  static final greenS12 = green.copyWith(fontSize: 12);
+  static final greenS14 = green.copyWith(fontSize: 14);
+  static final greenS14Bold= greenS14.copyWith(fontWeight: FontWeight.bold);
+  static final greenS14BoldW700 = greenS14.copyWith(fontWeight: FontWeight.w700);
+  static final greenS16 = green.copyWith(fontSize: 16);
+  static final greenS16Bold= greenS16.copyWith(fontWeight: FontWeight.bold);
+  static final greenS16BoldW700 = greenS16.copyWith(fontWeight: FontWeight.w700);
+  static final greenS18 = green.copyWith(fontSize: 18);
+  static final greenS18Bold= greenS18.copyWith(fontWeight: FontWeight.bold);
+  static final greenS18BoldW700 = greenS18.copyWith(fontWeight: FontWeight.w700);
 }
+

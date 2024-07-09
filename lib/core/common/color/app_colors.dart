@@ -4,26 +4,31 @@ class AppColors {
   AppColors._();
 
   ///Common
-  static const Color primary = Color(0xFF173d7e);
+  static const Color primary = Color(0xFF1BAC4B);
   static const Color secondary = Color(0xFF1E8AE7);
   static const Color error = Color(0xFFEE3134);
   static const Color red = Color(0xFFFF0033);
   static const Color green = Color(0xFF06C755);
+  static const Color green1 = Color(0xFF1BAC4B);
+
   static const Color blue = Color(0xFF4285F4);
   static const Color black = Color(0xFF050708);
   static const Color yellow = Color(0xFFFFFF00);
-  static const Color grey = Colors.grey;
+  static const Color grey = Color(0xFF737273);
+  static const Color grey1 = Color(0xFFEEEFF2);
 
   static const Color yellowBold = Color(0xFFBA913F);
   static const Color yellowThin = Color(0xFFFAF6F0);
   static const Color yellowThin1 = Color(0xFFC8A765);
 
 
-  static const Color grey1 = Color(0xFF494F5B);
+  // static const Color grey1 = Color(0xFF494F5B);
+  static const Color grey2 = Color(0xFF626162);
+
   static const Color grey3 = Color(0xFF767D88);
   static const Color grey4 = Color(0xFF4A4A4A);
   static const Color grey5 = Color(0xFF404040);
-
+  static const Color grey6 = Color(0xFF80869A);
   static const Color black1 = Color(0xFF18202E);
   static const Color black2 = Color(0xFF3D4758);
 
@@ -31,6 +36,9 @@ class AppColors {
   static const Color white = Color(0xFFFFFFFF);
   static const Color white1 = Color(0xFFF5F7FA);
   static const Color white2 = Color(0xFFF0F2F5);
+  static const Color white3 = Color(0xFFF5F5F6);
+
+
 
   ///Background
   static const Color background = Color(0xFFFFFFFF);
