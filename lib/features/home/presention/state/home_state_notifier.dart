@@ -1,10 +1,10 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shoppe/core/domain/entity/food/food_entity.dart';
-import 'package:shoppe/core/domain/usecase/food_usecase/GetListFood.dart';
+import 'package:shoppe/core/domain/usecase/food_usecase/get_list_commodity.dart';
 import 'package:shoppe/features/home/presention/state/home_state.dart';
 
 class HomeStateNotifier extends StateNotifier< AsyncValue< HomeState>> {
-  final GetListFood? getListFoodUseCase;
+  final GetListFoodUseCase? getListFoodUseCase;
   HomeStateNotifier({
     this.getListFoodUseCase,
   }) : super(const AsyncValue.loading());

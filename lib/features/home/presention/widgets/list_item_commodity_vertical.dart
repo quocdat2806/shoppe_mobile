@@ -7,7 +7,6 @@ class ListItemCommodityVertical extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  ListView.builder(physics: const NeverScrollableScrollPhysics(),itemCount: 10,itemBuilder: (context,index){
-
       return const ItemCommodityVertical();
     },shrinkWrap: true,);
   }

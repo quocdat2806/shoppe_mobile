@@ -7,7 +7,7 @@ class ItemCommodityHorizontal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 12),
+      padding: const EdgeInsets.only(right: 12),
       width: MediaQuery.sizeOf(context).width / 2,
       child: Column(
         children: [

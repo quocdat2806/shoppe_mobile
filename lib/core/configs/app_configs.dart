@@ -4,10 +4,7 @@ class AppConfigs {
 
   static const String appName = "shoppe";
 
-  static const String fontFamily = "Montserrat";
-
-
-
+  static const String fontFamily = "Poppins";
 
   ///Paging
   static const pageSize = 40;

@@ -18,7 +18,7 @@ class CategoryTitle extends StatelessWidget {
         Row(
           children: [
             Text(trailingText ?? '',style: AppTextStyle.greenS14BoldW700),
-            // trailingIcon ?? const Icon(Icons.navigate_next),
+            trailingIcon ?? const SizedBox.shrink(),
           ],
         )
       ],

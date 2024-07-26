@@ -25,7 +25,7 @@ class AppTabBar extends StatelessWidget {
           // color: Theme.of(context),
           borderRadius: const BorderRadius.all(Radius.circular(20)),
           // boxShadow: AppShadow.boxShadow,
-          border: Border.all(color: AppColors.border)),
+        ),
       child: TabBar(
         controller: tabController,
         tabs: buildTabItems(),

@@ -3,7 +3,7 @@ import 'package:shoppe/core/data/datasource/food/food_datasource.dart';
 import 'package:shoppe/core/data/datasource/food/food_datasource_ipl.dart';
 import 'package:shoppe/core/data/responsitory/food/food_responsitory_ipl.dart';
 import 'package:shoppe/core/domain/responsitory/food/food_responsitory.dart';
-import 'package:shoppe/core/domain/usecase/food_usecase/GetListFood.dart';
+import 'package:shoppe/core/domain/usecase/food_usecase/get_list_commodity.dart';
 import 'package:shoppe/core/network/api_utils.dart';
 import 'package:shoppe/features/home/presention/state/home_state.dart';
 import 'package:shoppe/features/home/presention/state/home_state_notifier.dart';
@@ -20,9 +20,9 @@ final todoRepositoryProvider = Provider<FoodResponsitory>((ref) {
 });
 
 // Use Cases
-final getTodosProvider = Provider<GetListFood>((ref) {
+final getTodosProvider = Provider<GetListFoodUseCase>((ref) {
   final repository = ref.watch(todoRepositoryProvider);
-  return GetListFood(foodResponsitory: repository);
+  return GetListFoodUseCase(foodResponsitory: repository);
 });
 
 // State Notifier

@@ -69,6 +69,8 @@ class HomePageState extends ConsumerState<HomePage> {
                             const SizedBox(height: 12),
                             const ListCategory(),
                             const SizedBox(height: 12),
+                            const CategoryTitle(title: 'flash sale'),
+                            const SizedBox(height: 12),
                             const CategoryTitle(title: 'Khuyến mãi'),
                             const SizedBox(height: 12),
                             const CategoryTitle(title: 'Top'),

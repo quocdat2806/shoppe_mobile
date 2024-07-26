@@ -1,9 +1,9 @@
 class AppSVGs {
   static const icHome = 'assets/vectors/ic_meal.svg';
   static const icOrder = 'assets/vectors/ic_order.svg';
-  static const icFavorite = 'assets/vectors/ic_favorite.svg';
+  static const icFavorite = 'assets/vectors/ic_heart.svg';
   static const icProfile = 'assets/vectors/ic_profile.svg';
-  static const icMeal = 'assets/vectors/ic_meal_3x.svg';
+  static const icMeal = 'assets/vectors/ic_meal.svg';
   static const icNotification = 'assets/vectors/ic_notification.svg';
   static const icShoppingCart = 'assets/vectors/ic_shopping.svg';
   static const icSearch = 'assets/vectors/ic_search.svg';
@@ -20,6 +20,8 @@ class AppSVGs {
   static const icTwitter = 'assets/vectors/ic_twitter.svg';
   static const icGoogle = 'assets/vectors/ic_google.svg';
   static const icLockPassword = 'assets/vectors/ic_lock_password.svg';
+  static const icSaleOff = 'assets/vectors/ic_bookmark.svg';
+
 
 
 
