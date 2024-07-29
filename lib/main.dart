@@ -9,7 +9,6 @@ import 'firebase_options.dart';
    WidgetsFlutterBinding.ensureInitialized();
    PackageInfo packageInfo = await PackageInfo.fromPlatform();
    String packageName = packageInfo.packageName;
-   debugPrint("pk name ${packageName}");
  await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );

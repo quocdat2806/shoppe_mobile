@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:shoppe/core/common/color/app_colors.dart';
 import 'package:shoppe/core/common/dimens/app_dimens.dart';
@@ -15,6 +17,7 @@ class AppButton extends StatelessWidget {
   final Color backgroundColor;
   final Color disableBackgroundColor;
   final TextStyle textStyle;
+  final double? containerPadding;
 
   //Child widgets
   final Widget? leadingIcon;
@@ -50,37 +53,41 @@ class AppButton extends StatelessWidget {
     this.padding,
     this.boxShadow,
     this.isEnabled = true,
+    this.containerPadding,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: height,
-      width: width,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(cornerRadius),
-        border: borderColor != null
-            ? Border.all(
-                color: borderColor!,
-                width: borderWidth,
-              )
-            : null,
-        boxShadow: boxShadow,
-      ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(
-          cornerRadius,
+    return Padding(
+      padding:  EdgeInsets.all(containerPadding??0),
+      child: Container(
+        height: height,
+        width: width,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(cornerRadius),
+          border: borderColor != null
+              ? Border.all(
+                  color: borderColor!,
+                  width: borderWidth,
+                )
+              : null,
+          boxShadow: boxShadow,
         ),
-        child: Material(
-          color: isEnabled ? backgroundColor : AppColors.gray1,
+        child: ClipRRect(
           borderRadius: BorderRadius.circular(
             cornerRadius,
           ),
-          child: InkWell(
-            onTap: isEnabled ? onPressed : null,
-            child: Padding(
-              padding: padding ?? EdgeInsets.zero,
-              child: _buildChildWidget(),
+          child: Material(
+            color: isEnabled ? backgroundColor : AppColors.gray1,
+            borderRadius: BorderRadius.circular(
+              cornerRadius,
+            ),
+            child: InkWell(
+              onTap: isEnabled ? onPressed : null,
+              child: Padding(
+                padding: padding ?? EdgeInsets.zero,
+                child: _buildChildWidget(),
+              ),
             ),
           ),
         ),

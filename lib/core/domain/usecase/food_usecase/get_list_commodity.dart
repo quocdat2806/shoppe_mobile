@@ -8,7 +8,7 @@ class GetListFoodUseCase {
   });
 
   Future<List<FoodEntity>?>getListFood() async{
-    return await foodResponsitory?.getListFood();
+    return [];
 }
 
 

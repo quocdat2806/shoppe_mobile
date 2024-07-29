@@ -12,4 +12,6 @@ abstract class ApiClient {
   Future<List<FoodModel>> getPosts();
   @POST("/api/auth/signIn")
   Future<UserModel> signIn(@Body() UserModel userModel);
+  @POST("/api/auth/test")
+  Future<void>test();
 }

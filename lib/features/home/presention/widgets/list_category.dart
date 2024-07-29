@@ -7,17 +7,17 @@ class ListCategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 2.25 / 0.75,
-      child: GridView.builder(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 5,
-          childAspectRatio: 2.75 / 2,
+        aspectRatio: 2.25 / 1,
+        child: GridView.builder(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 5,
+            childAspectRatio: 1,
+          ),
+          itemCount: 10,
+          itemBuilder: (context, index) {
+            return const CategoryItem();
+          },
         ),
-        itemCount: 10,
-        itemBuilder: (context, index) {
-          return const CategoryItem();
-        },
-      ),
-    );
+      );
   }
 }

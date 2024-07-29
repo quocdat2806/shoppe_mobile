@@ -19,8 +19,7 @@ class FoodDataSourceImpl implements FoodDatasource {
 
   @override
   Future<List<FoodModel>> getTodos() {
-    // TODO: implement getTodos
-    throw UnimplementedError();
+    return apiClient.getPosts();
   }
 
   @override

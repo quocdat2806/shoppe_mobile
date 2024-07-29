@@ -1,12 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoppe/core/common/color/app_colors.dart';
+import 'package:shoppe/core/common/dimens/app_dimens.dart';
+import 'package:shoppe/core/common/navigator/app_navigator.dart';
 import 'package:shoppe/core/common/svgs/app_svgs.dart';
 import 'package:shoppe/core/common/text_styles/app_text_styles.dart';
-
-class SplashPage extends StatelessWidget {
+import 'package:shoppe/core/database/shapreference.dart';
+import 'package:shoppe/core/routers/app_routers.dart';
+class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
+  @override
+  State<SplashPage> createState() => _SplashPageState();
+}
+class _SplashPageState extends State<SplashPage> {
 
+  @override
+  void initState() {
+    super.initState();
+    checkOnboardingCompleted(context);
+  }
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -24,7 +36,7 @@ class SplashPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SvgPicture.asset(AppSVGs.icSplashLogo),
-                const SizedBox(height: 8),
+                const SizedBox(height: AppDimens.size8),
                  Text("Hunny Food",style: AppTextStyle.whiteS24W800,)
               ],
             ),
@@ -33,4 +45,18 @@ class SplashPage extends StatelessWidget {
       ],
     );
   }
+}
+Future<void> checkOnboardingCompleted (BuildContext context) async{
+  bool isOnboardCompleted =
+  await SharedPreferencesHelper.isOnboardCompleted();
+  if(!context.mounted){
+    return;
+  }
+  if(isOnboardCompleted){
+    Future.delayed(const Duration(seconds: 1));
+    AppNavigator(context: context).pushReplacementNamed(AppRouter.onBoarding);
+    return;
+  }
+  Future.delayed(const Duration(seconds: 1));
+  AppNavigator(context: context).pushReplacementNamed(AppRouter.onBoarding);
 }

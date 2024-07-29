@@ -6,7 +6,7 @@ class BannerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(32),
+          borderRadius: BorderRadius.circular(16),
           image: const DecorationImage(
             fit: BoxFit.cover,
             image: NetworkImage(

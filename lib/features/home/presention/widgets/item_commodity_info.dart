@@ -38,7 +38,7 @@ class ItemCommodityInfo extends StatelessWidget {
             const SizedBox(width: 8),
             const Text("4.8", style: AppTextStyle.grey2),
             const SizedBox(width: 8),
-            const Text("(1.2K)", style: AppTextStyle.grey2),
+            const Expanded(child: Text("(1.2K)", style: AppTextStyle.grey2,overflow: TextOverflow.ellipsis,)),
           ],
         ),
         const SizedBox(height: 8),
